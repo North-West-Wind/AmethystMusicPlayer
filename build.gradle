@@ -6,29 +6,17 @@ plugins {
 version = project.mod_version
 group = project.maven_group
 
-base {
-	archivesName = project.archives_base_name
-}
-
 repositories {
-}
-
-loom {
-	splitEnvironmentSourceSets()
-
-	mods {
-		"amethystmusicplayer" {
-			sourceSet sourceSets.main
-			sourceSet sourceSets.client
-		}
-	}
-
 }
 
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings loom.officialMojangMappings()
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+}
+
+base {
+	archivesName = project.archives_base_name
 }
 
 processResources {
