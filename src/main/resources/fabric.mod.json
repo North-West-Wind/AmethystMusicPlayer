@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "amethystmusicplayer",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Amethyst Music Player",
+  "description": "Turns amethyst-related block sounds into music.",
   "authors": [
-    "Me!"
+    "NorthWestWind"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/North-West-Wind/AmethystMusicPlayer"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "GPLv3",
+  "icon": "assets/amethystmusicplayer/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "ml.northwestwind.amethystmusicplayer.AmethystMusicPlayer"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "amethystmusicplayer.mixins.json"
   ],
 
   "depends": {
@@ -31,8 +31,5 @@
     "fabric-api": "*",
     "minecraft": "~1.19.4",
     "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }
