@@ -1,7 +1,7 @@
 package ml.northwestwind.amethystmusicplayer;
 
 import com.google.common.collect.Maps;
-import net.fabricmc.api.ModInitializer;
+import net.fabricmc.api.ClientModInitializer;
 import org.apache.commons.compress.utils.Lists;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,7 +10,7 @@ import javax.sound.midi.*;
 import java.io.File;
 import java.util.*;
 
-public class AmethystMusicPlayer implements ModInitializer {
+public class AmethystMusicPlayer implements ClientModInitializer {
     public static final Logger LOGGER = LogManager.getLogger();
     public static final int NOTE_ON = 0x90;
     public static final int C5 = 72; // Middle C should be C4, but amethyst is already very high-pitched, so I put it 1 octave above.
@@ -20,7 +20,7 @@ public class AmethystMusicPlayer implements ModInitializer {
     private static int index = -1;
 
     @Override
-    public void onInitialize() {
+    public void onInitializeClient() {
         // Read config
         try {
             File configDir = new File("config/amethystmusicplayer");
