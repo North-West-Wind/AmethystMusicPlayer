@@ -4,13 +4,13 @@
   "package": "ml.northwestwind.amethystmusicplayer.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "MixinAbstractSoundInstance",
-    "MixinSimpleSoundInstance"
   ],
   "injectors": {
     "defaultRequire": 1
   },
   "client": [
+    "MixinAbstractSoundInstance",
+    "MixinSimpleSoundInstance",
     "MixinSoundEngine"
   ]
 }
